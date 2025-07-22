@@ -1,56 +1,80 @@
-# SkillSync - AI Chat Assistant (Cointab Assignment)
+# 🧠 SkillSync - AI Chat Assistant (Cointab Assignment)
 
-A full-stack AI chat assistant web app built with *Next.js, **Express.js, and **PostgreSQL*. It allows users to start new conversations, stores chats in the database, and displays previous conversations in a sidebar.
+A full-stack AI chat assistant built with *Next.js, **Express.js, and **PostgreSQL*. Users can chat with an assistant, start new conversations, and view previously saved chats.
 
 ---
 
-## 📌 Features
+## 📸 Screenshots
 
-✅ Chat interface with an AI assistant  
-✅ "New Chat" button to start fresh chats  
-✅ Sidebar to view saved previous chats  
-✅ Messages (user + bot) are saved to PostgreSQL  
-## 🧠 Technologies Used
+### 🏠 Home Page
+![Home Page](./homepg.png)
 
-- Frontend: Next.js (App Router)
-- Backend: Express.js
-- Database: PostgreSQL
-- Styling: CSS (globals.css)
+### 💬 New Chat
+![New Chat](./newcht.png)
+
+### 🔁 Continued Chat View
+![Continued Chat](./newcht2.png)
+
+---
+
+## ✨ Features
+
+- 🗣 Chat with a simple AI assistant  
+- 🆕 "New Chat" button to start fresh conversations  
+- 📜 Sidebar showing previous chats  
+- 💾 Saves both user & bot messages in PostgreSQL  
+- 📱 Clean and responsive UI  
+- ⚡ Fast local performance
+
+---
+
+## 🔧 Tech Stack
+
+| Layer       | Tech        |
+|-------------|-------------|
+| Frontend    | Next.js (App Router) |
+| Backend     | Express.js  |
+| Database    | PostgreSQL  |
+| Styling     | CSS (globals.css) |
+
+---
 
 ## ⚙ How It Works
 
-1. *User enters a message* in the chat.
-2. Message is sent to the Express server via POST /api/chat.
-3. Server saves both user & bot messages in PostgreSQL.
-4. Previous messages are retrieved via GET /api/chats.
-5. Sidebar displays saved chats in order of time.
-
-## 🗃 Database Schema
-
-**Table: chats**
-
-| Column       | Type              | Description           |
-|--------------|-------------------|-----------------------|
-| id         | SERIAL PRIMARY KEY| Unique message ID     |
-| role       | VARCHAR(10)       | "user" or "bot"       |
-| content    | TEXT              | Message text          |
-| created_at | TIMESTAMP         | Defaults to now       |
+1. User types a message and sends it.
+2. Message is sent via POST /api/chat to the Express backend.
+3. Backend replies with: You said: <message>.
+4. Both messages (user & bot) are stored in the database.
+5. GET /api/chats fetches all saved conversations for sidebar view.
 
 ---
 
-## 🧪 How to Run Locally
+## 🗃 Database Schema
 
-### 1. Clone the repo
+**PostgreSQL Table: chats**
+
+| Column       | Type            | Description               |
+|--------------|-----------------|---------------------------|
+| id         | SERIAL PRIMARY KEY | Unique message ID      |
+| role       | VARCHAR(10)     | "user" or "bot"           |
+| content    | TEXT            | Message text              |
+| created_at | TIMESTAMP       | Auto set to current time  |
+
+---
+
+## 🚀 How to Run Locally
+
+### 1️⃣ Clone the Repo
 
 bash
 git clone https://github.com/Jisnxdcruz/cointab-chat-app.git
 cd cointab-chat-app
 
-2. Set up PostgreSQL
+2️⃣ Set Up PostgreSQL
 
 Create a database: cointab-chat
 
-Open pgAdmin or psql and run this SQL:
+Run this SQL:
 
 
 CREATE TABLE chats (
@@ -60,31 +84,42 @@ CREATE TABLE chats (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-3. Run Backend
+3️⃣ Start Backend
 
 cd backend
 npm install
 node server.js
 
-Server runs at: http://localhost:3001
+> Runs on: http://localhost:3001
 
-4. Run Frontend
+
+
+4️⃣ Start Frontend
 
 cd ../frontend
 npm install
 npm run dev
 
-Frontend runs at: http://localhost:3000
+> Runs on: http://localhost:3000
 
 
-💡 Notes
-
-Currently uses a simulated bot reply ("You: ...").
-
-You can replace it with OpenAI, Ollama, or other LLMs later.
 
 
-👤 Author
+---
 
-Made with ❤ by Jisnamary
-GitHub: https://github.com/Jisnxdcruz
+🔮 Notes
+
+💡 Bot reply is currently hardcoded for demo: You said: <user message>
+
+You can integrate a real AI model (e.g., OpenAI API or Ollama locally)
+
+
+
+---
+
+👩‍💻 Author
+
+Built with 💙 by Jisnamary D'Cruz
+🔗 GitHub - @Jisnxdcruz
+
+
