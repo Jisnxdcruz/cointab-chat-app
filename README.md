@@ -3,19 +3,19 @@
 A full-stack AI chat assistant built with *Next.js, **Express.js, and **PostgreSQL*. Users can chat with an assistant, start new conversations, and view previously saved chats.
 
 ---
-
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home Page](./homepg.png)
+![Home Page](screenshot/homepg.png)
 
-### 💬 New Chat
-![New Chat](./newcht.png)
+### 💬 New Chat View
+![New Chat](screenshot/newcht.png)
 
-### 🔁 Continued Chat View
-![Continued Chat](./newcht2.png)
+### 📂 Continued Chat View
+![Continued Chat](screenshot/newcht2.png)
 
 ---
+
 
 ## ✨ Features
 
